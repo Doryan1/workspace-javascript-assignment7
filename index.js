@@ -16,13 +16,17 @@ import * as firebaseui from "firebaseui";
 //  Code for later database connection Please ignore.
 
 // Add Firebase project configuration object here
-var firebaseConfig = {
-
+const firebaseConfig = {
+  apiKey: "AIzaSyAbeo7pSZtNGo5OsZdusZVxAw6viHU1eXo",
+  authDomain: "assignment7-15e08.firebaseapp.com",
+  databaseURL: "https://assignment7-15e08.firebaseio.com",
+  projectId: "assignment7-15e08",
+  storageBucket: "assignment7-15e08.appspot.com",
+  messagingSenderId: "982981695217",
+  appId: "1:982981695217:web:cd6c8d5e2d301dcf61bb50",
+  measurementId: "G-G0K4SN028Y"
 };
 
 firebase.initializeApp(firebaseConfig);
 
-
-
 // Save the list to database
-
