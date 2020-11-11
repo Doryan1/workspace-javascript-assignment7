@@ -16,7 +16,7 @@ import * as firebaseui from "firebaseui";
 //  Code for later database connection Please ignore.
 
 // Add Firebase project configuration object here
-const firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyAbeo7pSZtNGo5OsZdusZVxAw6viHU1eXo",
   authDomain: "assignment7-15e08.firebaseapp.com",
   databaseURL: "https://assignment7-15e08.firebaseio.com",
@@ -30,3 +30,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Save the list to database
+$("#save").click(function() {
+  firebase
+    .firestore()
+    .collection("mylist")
+    .add({
+      item: "try it"
+    });
+  console.log("save it");
+});
