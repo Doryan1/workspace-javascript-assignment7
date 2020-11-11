@@ -31,11 +31,19 @@ firebase.initializeApp(firebaseConfig);
 
 // Save the list to database
 $("#save").click(function() {
-  firebase
-    .firestore()
-    .collection("mylist")
-    .add({
-      item: "try it"
-    });
-  console.log("save it");
+  // document.querySelectorAll('li) ==> nodelist
+  //for loop to go through each node listed
+  // and then get the text content
+
+  $("li").each(function() {
+    var value = $(this).text();
+    console.log(value);
+
+    firebase
+      .firestore()
+      .collection("mylist")
+      .add({
+        item: value
+      });
+  });
 });
